@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Cart;
 use Illuminate\Http\Request;
+
+use App\Models\Cart;
 
 class CartController extends Controller
 {
@@ -14,8 +15,7 @@ class CartController extends Controller
    */
   public function index()
   {
-    $carts = Cart::get();
-    return $carts;
+    //
   }
 
   /**
@@ -47,9 +47,7 @@ class CartController extends Controller
    */
   public function show($idUser)
   {
-
-    $carts = Cart::where('idUser',$idUser)->get();
-    return response()->json($carts, 200);
+    
   }
 
   /**
