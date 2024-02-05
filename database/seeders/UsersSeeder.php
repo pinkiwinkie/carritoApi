@@ -15,6 +15,8 @@ class UsersSeeder extends Seeder
   public function run()
   {
     $user = new User();
+    $user->login= 'admin';
+    $user->password= '1234';  
     $user->api_token = 'Token1234';
     $user->save();
   }
