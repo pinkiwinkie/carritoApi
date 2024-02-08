@@ -57,7 +57,7 @@ class CartController extends Controller
    */
   public function update(Request $request, $id)
   {
-    $cart = Cart::where('id', $id)->get();
+    $cart = Cart::where('id', $id)->first();
     $cart->quantity = $request->get('quantity');
     $cart->save();
     return response()->json($cart, 201);
