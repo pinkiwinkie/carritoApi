@@ -17,4 +17,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:api')->group(function () {
   Route::apiResource('carts', CartController::class);
+  Route::delete('carts/destroy2/{idUser}', [CartController::class, 'destroy2']);
 });

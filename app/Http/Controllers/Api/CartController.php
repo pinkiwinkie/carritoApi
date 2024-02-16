@@ -81,4 +81,11 @@ class CartController extends Controller
     $cart->delete();
     return response()->json(null, 204);
   }
+
+  public function destroy2($idUser)
+  {
+    $cart = Cart::where('idUser', $idUser);
+    $cart->delete();
+    return response()->json(null, 204);
+  }
 }
